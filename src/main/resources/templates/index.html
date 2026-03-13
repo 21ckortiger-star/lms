@@ -20,7 +20,7 @@
         <span th:if="${isLoggedIn}" style="color:#d6e7ff; margin-left:8px;">환영해요, <b th:text="${loginName}">사용자</b>님</span>
         <a class="auth-btn login" th:if="${isLoggedIn}" href="/logout">로그아웃</a>
 
-        <a class="auth-btn login" th:unless="${isLoggedIn}" href="/login">👤 로그인</a>
+        <a class="auth-btn login login-hint" th:unless="${isLoggedIn}" href="/login" data-tooltip="테스트 로그인: admin / 1234">👤 로그인</a>
         <a class="auth-btn signup" th:unless="${isLoggedIn}" href="/signup">회원가입</a>
       </nav>
     </div>
