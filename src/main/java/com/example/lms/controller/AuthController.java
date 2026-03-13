@@ -67,6 +67,6 @@ public class AuthController {
     public String logout(HttpSession session, RedirectAttributes redirectAttributes) {
         session.invalidate();
         redirectAttributes.addFlashAttribute("logoutMessage", "로그아웃되었습니다.");
-        return "redirect:/login";
+        return "redirect:/";
     }
 }
