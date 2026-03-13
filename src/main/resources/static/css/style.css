@@ -204,6 +204,22 @@ a {
   font-weight: 600;
 }
 
+.card.locked {
+  border-color: #3a506f;
+  box-shadow: inset 0 0 24px rgba(93, 170, 255, 0.05);
+}
+
+.lock-badge {
+  font-size: 0.85rem;
+  margin-left: 4px;
+}
+
+.lock-text {
+  font-size: 0.82rem;
+  color: #ffd48a;
+  margin-top: -2px;
+}
+
 .contact-list {
   padding-left: 1rem;
   color: var(--muted);

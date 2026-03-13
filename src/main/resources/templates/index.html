@@ -52,22 +52,25 @@
       <div class="container">
         <h2>Projects</h2>
         <div class="grid">
-          <article class="card">
+          <article class="card" th:classappend="${!isLoggedIn} ? ' locked' : ''">
             <img src="/images/space/space_1-1.jpg" alt="프로젝트 1 우주 썸네일" />
-            <h3>SPACE ONE</h3>
+            <h3>SPACE ONE <span class="lock-badge" th:if="${!isLoggedIn}">🔒</span></h3>
             <p>eye to space</p>
+            <p class="lock-text" th:if="${!isLoggedIn}">로그인 후 입장 가능</p>
             <a href="/project/1">Go</a>
           </article>
-          <article class="card">
+          <article class="card" th:classappend="${!isLoggedIn} ? ' locked' : ''">
             <img src="/images/space/space_2-1.jpg" alt="프로젝트 2 우주 썸네일" />
-            <h3>SPACE TWO</h3>
+            <h3>SPACE TWO <span class="lock-badge" th:if="${!isLoggedIn}">🔒</span></h3>
             <p>space to earth</p>
+            <p class="lock-text" th:if="${!isLoggedIn}">로그인 후 입장 가능</p>
             <a href="/project/2">Go</a>
           </article>
-          <article class="card">
+          <article class="card" th:classappend="${!isLoggedIn} ? ' locked' : ''">
             <img src="/images/space/space_3-1.jpg" alt="프로젝트 3 우주 썸네일" />
-            <h3>SPACE THREE</h3>
+            <h3>SPACE THREE <span class="lock-badge" th:if="${!isLoggedIn}">🔒</span></h3>
             <p>mine space</p>
+            <p class="lock-text" th:if="${!isLoggedIn}">로그인 후 입장 가능</p>
             <a href="/project/3">Go</a>
           </article>
         </div>
