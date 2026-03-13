@@ -41,4 +41,9 @@ public class AuthRepository {
         Integer count = jdbcTemplate.queryForObject(sql, Integer.class, username);
         return count != null && count > 0;
     }
+
+    public void updatePassword(String username, String encodedPassword) {
+        String sql = "update member set password = ? where username = ?";
+        jdbcTemplate.update(sql, encodedPassword, username);
+    }
 }
